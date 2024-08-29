@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station Selector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Preventive and Corrective maintenance records</h1>
+
+        <!-- Province Selection -->
+        <label for="province">Select Province:</label>
+        <select id="province">
+            <option value="">--Select Province--</option>
+            <option value="Kigali">Kigali</option>
+            <option value="West">West</option>
+            <option value="North">North</option>
+            <option value="East">East</option>
+            <option value="Sourth">South</option>
+        </select>
+
+        <!-- District Selection -->
+        <label for="district">Select District:</label>
+        <select id="district">
+            <option value="">--Select District--</option>
+        </select>
+
+        <!-- Type of Station Selection -->
+        <label for="stationType">Select Type of Station:</label>
+        <select id="stationType">
+            <option value="">--Select Type of Station--</option>
+            <option value="ARG">Automatic Rain Gauge</option>
+            <option value="MRG">Manual Rain Gauge</option>
+            <option value="AWS">Automatic Weather Gauge</option>
+            <option value="ASS">Agro-Synoptic Weather Station</option>
+        </select>
+
+        <!-- Station Name Selection -->
+        <label for="stationName">Select Station Name:</label>
+        <select id="stationName">
+            <option value="">--Select Station Name--</option>
+        </select>
+
+        <!-- Instrument Selection -->
+        <label for="instrument">Select Instrument:</label>
+        <select id="instrument">
+            <option value="">--Select Instrument--</option>
+        </select>
+
+        <!-- Maintenance Details Form -->
+        <div id="maintenanceForm" class="hidden">
+            <h2>Maintenance Details</h2>
+            <label for="maintenanceDate">Date of Maintenance:</label>
+            <input type="date" id="maintenanceDate">
+
+            <label for="recommendedDate">Recommended Date:</label>
+            <input type="date" id="recommendedDate">
+
+            <label for="performedWork">Performed Work:</label>
+            <textarea id="performedWork" rows="4" placeholder="Describe the performed work..."></textarea>
+
+            <label for="uploadDocument">Upload Document:</label>
+            <input type="file" id="uploadDocument">
+
+            <button id="saveMaintenance">Save Maintenance Record</button>
+        </div>
+
+        <!-- Maintenance Records Table Wrapper -->
+        <div id="maintenanceTableWrapper" class="hidden">
+            <h2>Maintenance Records</h2>
+            <table id="maintenanceTable">
+                <thead>
+                    <tr>
+                        <th>Date of Maintenance</th>
+                        <th>Performed Work</th>
+                        <th>Recommended Date</th>
+                        <th>Document</th>
+                    </tr>
+                </thead>
+                <tbody id="maintenanceRecords">
+                    <!-- Maintenance records will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
